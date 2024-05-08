@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+
+    var target = []; // Create a new target Array.
+
+    // Example Codes:
+    target.All = "https://fryerninja.com/cart"+window.location.href.split('#')[1]; // Redirects Non-targeted / all other visitors to this URL.
+    target.FR  = "https://www.c7wbclk.com/327Z6M6/6L5QK92/"+window.location.href.split('#')[1];  // Redirects French Visitors to this URL.
+    target.US  = "https://fryerninja.com/cart"+window.location.href.split('#')[1];  // Redirects US Visitors to this URL.
+    target.UK  = "https://www.c7wbclk.com/327Z6M6/6L8JBQ8/"+window.location.href.split('#')[1];  // Redirects UK Visitors to this URL.
+    target.AU  = "https://www.c7wbclk.com/327Z6M6/6L4CNJF/"+window.location.href.split('#')[1];  // Redirects Sweden Visitors to this URL.
+    target.DE  = "https://www.c7wbclk.com/327Z6M6/6L75G1M/"+window.location.href.split('#')[1];  // Redirects Germany Visitors to this URL.
+
+    // ------------------------------------------------------
+    // DON'T EDIT THE BELOW CODE UNLESS REQUIRED
+    // ------------------------------------------------------
+    /**
+     * If a valid country code matches the targets list, then it redirects to that particular link.
+     * Otherwise redirects to "All" target URL.
+     */
+    function geoip(g){window.top.location.href=target[g.country]||target.All}
+  </script>
+  <script src="https://get.geojs.io/v1/ip/country.js?callback=geoip"></script>
+</head>
+<body>
+    <p>Please wait...</p>
+</body>
+</html>
